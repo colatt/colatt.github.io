@@ -41,7 +41,9 @@ Type in Blink for the name of the project and select the ESP8266 for your device
 
 #### 5. Add Widgets
 
-Tap in your project and add a Button. Tap on the Button to get into the Button Settings. Once there, click on the PIN and select Digital and D5.
+Tap in your project and add a Button. Tap on the Button to get into the Button Settings. Once there, click on the PIN and select Digital and gp5.
+
+<img src="../images/20180102/Screenshot_Blynk_Create_Button.png" width="300" />
 
 #### 4. Auth Token
 
@@ -93,7 +95,7 @@ Copy and paste the code below and make sure to set “YourBlynkAuthToken” to t
     void setup()
     {
         Serial.begin(115200);
-        Blynk.begin(auth, ssid, pass);
+        Blynk.begin(auth, ssid, password);
     }
 
     void loop()
