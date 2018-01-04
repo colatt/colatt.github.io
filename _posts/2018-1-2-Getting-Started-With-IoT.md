@@ -79,29 +79,29 @@ To select a board go to Tools > Board: > NodeMCU 1.0 (ESP-12E Module).
 Copy and paste the code below and make sure to set “YourBlynkAuthToken” to the Blynk Auth Token you received in an earlier step. Also set your wifi network name and password in “YourNetworkName” and “YourNetworkPassword”.
 
 ```c
-    #define BLYNK_PRINT Serial
-    #include <ESP8266WiFi.h>
-    #include <BlynkSimpleEsp8266.h>
+#define BLYNK_PRINT Serial
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
 
-    // You should get Auth Token in the Blynk App.
-    // Go to the Project Settings (nut icon).
-    char auth[] = "YourBlynkAuthToken";
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "YourBlynkAuthToken";
 
-    // Your WiFi credentials.
-    // Set password to "" for open networks.
-    char ssid[] = "YourNetworkName";
-    char password[] = "YourNetworkPassword";
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "YourNetworkName";
+char password[] = "YourNetworkPassword";
 
-    void setup()
-    {
-        Serial.begin(115200);
-        Blynk.begin(auth, ssid, password);
-    }
+void setup()
+{
+    Serial.begin(115200);
+    Blynk.begin(auth, ssid, password);
+}
 
-    void loop()
-    {
-        Blynk.run();
-    }
+void loop()
+{
+    Blynk.run();
+}
 ```
 
 #### 6. Upload
