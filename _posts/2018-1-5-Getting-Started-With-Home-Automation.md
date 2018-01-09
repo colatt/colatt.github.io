@@ -12,7 +12,7 @@ In my first post [Getting Started With IoT](/Getting-Started-With-IoT/), I showe
 ## Parts
 
 - [NodeMCU LUA WiFi ESP8266 Development Board](http://amzn.to/2D3vwGt)
-- [Arduino Starter Kit](http://amzn.to/2Fe76La)
+- [Arduino Starter Kit](http://amzn.to/2CJdMiV)
 - [3.3v Relay](https://www.ebay.com/itm/DC-3V-3-3V-Relay-High-Level-Driver-Module-optocouple-Relay-Module-for-Arduino/331502222842?rt=nc&_soffid=5&_soffType=PromotionalShipping&_trksid=p5731.m3795&siteId=0&pguid=e5179e4815f0aa1307b2ca1cffcc34bb&AdChoicePreference=true&rmvSB=true)
 - [Door Sensor Magnetic Reed Switch](http://amzn.to/2FeWz2f)
 - Wire - I used some 22awg speaker wire that I already had, however, using stranded wire in a breadboard can be difficult. I would recommend solid core if you don't plan on doing any soldering.
