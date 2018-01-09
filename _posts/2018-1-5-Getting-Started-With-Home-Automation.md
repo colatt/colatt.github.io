@@ -9,7 +9,7 @@ In my first post [Getting Started With IoT](/Getting-Started-With-IoT/), I showe
 
  I can’t tell you how many times I have made it into bed and then thought to myself “Did I close the garage door.” Then I get up and walk all the way downstairs, only to find out that I already closed it. Then there are those times I leave the house in a fog in the morning, as I'm not a morning person, and can’t remember if I put the door down as I was driving away. Since these things happen to me on a weekly, sometimes daily basis I figured this would be a great first project to tackle. So for my first home automation project, I wanted to be able to control my garage door from my phone. Not only did I want to be able to open and close it, I also wanted to be able to determine if it was currently opened or closed. I researched some commercial offers on the market, but this seemed simple enough that I could build it at a fraction of the cost of those products.
 
- ## Parts
+## Parts
 
 - [NodeMCU LUA WiFi ESP8266 Development Board](http://amzn.to/2D3vwGt)
 - [Arduino Starter Kit](http://amzn.to/2Fe76La)
