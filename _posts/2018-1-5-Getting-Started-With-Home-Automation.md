@@ -3,11 +3,11 @@ layout: post
 title: Getting Started With Home Automation
 ---
 
-In my first post [Getting Started With IoT](/Getting-Started-With-IoT/), I showed how you can make your first Internet of Things circuit and control a LED over the internet. While I still think that is pretty awesome, it is not really home automation. It does lay the groundwork for my very first home automation project and I highly recommend using that as a starting point if you want to build this project.
+In my first post [Getting Started With IoT](/Getting-Started-With-IoT/), I showed how you can make your first Internet of Things circuit and control a LED over the internet. While I still think that is pretty awesome, it is not really home automation. It does lay the groundwork for my very first home automation project and I highly recommend using that as a starting point if you want to build this project as I will not cover the basics that I already have in that post.
 
 ## Goals for the Project
 
- I can’t tell you how many times I have made it into bed and then thought to myself “Did I close the garage door.” Then I get up and walk all the way down there, only to find out that I did. Then there are those times I leave the house in a fog in the morning, as I'm not a morning person, and can’t remember if I put the door down as I was driving away. Since these things happen to me on a weekly, sometimes daily basis I figured this would be a great first project to tackle. So for my first home automation project, I wanted to be able to control my garage door from my phone. Not only did I want to be able to open and close it, I also wanted to be able to determine if it was currently opened or closed. I researched some commercial offers on the market, but this seemed simple enough that I could build it at a fraction of the cost of those products.
+ I can’t tell you how many times I have made it into bed and then thought to myself “Did I close the garage door.” Then I get up and walk all the way downstairs, only to find out that I already closed it. Then there are those times I leave the house in a fog in the morning, as I'm not a morning person, and can’t remember if I put the door down as I was driving away. Since these things happen to me on a weekly, sometimes daily basis I figured this would be a great first project to tackle. So for my first home automation project, I wanted to be able to control my garage door from my phone. Not only did I want to be able to open and close it, I also wanted to be able to determine if it was currently opened or closed. I researched some commercial offers on the market, but this seemed simple enough that I could build it at a fraction of the cost of those products.
 
  ## Parts
 
@@ -22,7 +22,7 @@ In my first post [Getting Started With IoT](/Getting-Started-With-IoT/), I showe
 
 ## Schematic
 
-![Blynk Schematic](../images/20180105/GarageDoor_bb.png)
+<img src="../images/20180105/GarageDoor_bb.png" width="800" />
 
 ## Blynk App Setup
 
@@ -95,9 +95,9 @@ void loop()
 
 BLYNK_WRITE(V1)
 {
-  //--on Blynk button press, activate garage door for 1 second
+  //--on Blynk button press, activate garage door for .6 second
   digitalWrite(RELAY_PIN, HIGH);
-  delay(1000);
+  delay(600);
   digitalWrite(RELAY_PIN, LOW);
 }
 
@@ -120,4 +120,22 @@ void garageDoorMagneticSensor()
 }
 ```
 
+Notice on V1 write, which we set up to be the button in the Blynk app, will turn on the relay for .6 seconds which mimics pressing the button on your garage door. Also notice that we hold the state of the door in memory and only send it to the Blynk LCD if it has changed, that way we don't continue to send the same state to Blynk over and over in the loop.
+
 ## Install
+
+Here is my assembled board. I put my electronics in tupperware for now and cut holes in the sides to run the wires.
+
+<img src="../images/20180105/20180108_Image_Assembled_Board.jpg" width="800" />
+
+On the rear of my garage door opener, I located the inputs where the garage door button connected and pushed the wires that come out of the relay.
+
+<img src="../images/20180105/20180108_Image_Relay_Connection.jpg" width="800" />
+
+With the door closed I added the magnetic sensor to the lift arm of the garage door and ran the wires above the arm.
+
+<img src="../images/20180105/20180108_Image_Magnetic_Sensor.jpg" width="800" />
+
+## Conclusion
+
+I have lots of ideas on how I can make this project even better and I plan to continue to add features to it. As I do I will post each incremental feature which will build on the last. While Blynk is providing a nice interface for now, it may not be the perfection solution in the end.
